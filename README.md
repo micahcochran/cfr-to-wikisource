@@ -1,6 +1,6 @@
 # cfr-to-wikisource
 
-== Description ==
+## Description
 Script that scrape the XML of the U.S. Code of Federal Regulations (CFR) Title 3:
 President Documents (Title 3).  This is a summary of presidential actions that happend in
 the prior year, so the 2007 edition has documents from 2006.
@@ -10,7 +10,7 @@ The XML for the Code of Federal Regulation goes back to 1996, but Title
 
 **Note any examples are illustration, and may not look exactly the same in Wikimedia software**
 
-== Requirements ==
+## Requirements
 Python 3.x  (likely 3.4+)
 
 Install all the other requirements for these scripts by doing this:
@@ -19,19 +19,20 @@ Install all the other requirements for these scripts by doing this:
  $ pip install -r requirements
 ```
 
-== License ==
+## License
 MIT   
 see [LICENSE]
 
 
 
-=== proc-to-wikisource-list.py ===
+### proc-to-wikisource-list.py
 
 Converts  Proclamation Table from Title 3 reformats it into wikitext for Wikisource's
 lists of United States Presidential Proclamations.  There are 3 different
 styles that it supports. Wikitext examples are in the source.
 
-==== Example output for print_as_single_line() ====
+#### Example output for print_as_single_line()
+
 *[Proclamation 9388](https://en.wikisource.org/wiki/Proclamation_9388) − To Take Certain Actions Under the African Growth and Opportunity Act (Jan. 11)
 *[Proclamation 9389](https://en.wikisource.org/wiki/Proclamation_9389) − Religious Freedom Day, 2016 (Jan. 15)
 *[Proclamation 9390](https://en.wikisource.org/wiki/Proclamation_9390) − Martin Luther King, Jr., Federal Holiday, 2016 (Jan. 15)
@@ -45,7 +46,7 @@ styles that it supports. Wikitext examples are in the source.
 *[[Proclamation 9391]] − American Heart Month, 2016 (Jan. 29)
 ```
 
-==== Example output for print_as_wiki_table() ====
+#### Example output for print_as_wiki_table()
 
 | No.                                                      | Signature Date |  Subject                                                             | 81 FR Page |
 | -------------------------------------------------------- | -------------- | -------------------------------------------------------------------- | ---------- |
@@ -75,7 +76,7 @@ styles that it supports. Wikitext examples are in the source.
 ```
 
 
-==== Example output for print_as_wiki_hybrid_table() (Default) ====
+#### Example output for print_as_wiki_hybrid_table() (Default)
 
 | No.                                                                   |     | Subject                                                              | Signature Date | 81 FR Page |
 | --------------------------------------------------------------------- |:---:| -------------------------------------------------------------------- | --------------:| ----------:|
