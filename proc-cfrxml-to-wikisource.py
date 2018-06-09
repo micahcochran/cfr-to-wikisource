@@ -44,12 +44,12 @@ def print_as_wiki_hybrid_table(rows, table_header):
     This is similar to the format used for the 2003 proclamations.
 
     ==== Example output ====
-    {| class="wikitable" style="valign:top;"
-    ! &nbsp;&nbsp;Proc.&nbsp;No.
-    ! align="center" | &nbsp;
-    ! Subject
-    ! align="center" | Signature Date
-    ! align="right" |<small>81 FR Page</small>
+    {| style="valign:top;"
+    ! Proc.&nbsp;No.
+    ! &nbsp;
+    ! align="left" | Subject
+    ! <small>Signature Date</small>
+    ! align="right" |&nbsp;&nbsp;<small>81 FR Page</small>
     |-
     | •&nbsp;[[Proclamation&nbsp;9388]]
     | align="center" | −
@@ -67,20 +67,18 @@ def print_as_wiki_hybrid_table(rows, table_header):
     """
 
     # Print as Wiki Table
-    print('{| class="wikitable" style="valign:top;"')
+    print('{| style="valign:top;"')
 
     h_num, h_signature_date, h_subject, h_fedreg_page = table_header
 
-    header = """! &nbsp;&nbsp;Proc.&nbsp;No.
-! align="center" | &nbsp;
-! Subject
-! align="center" | Signature Date
-! align="right" |<small>{h_fedreg_page}</small>"""
+    header = """! Proc.&nbsp;No.
+! &nbsp;
+! align="left" | Subject
+! <small>Signature Date</small>
+! align="right" |&nbsp;&nbsp;<small>{h_fedreg_page}</small>"""
 
     print(header.format(h_fedreg_page=h_fedreg_page))
     for row in rows:
-        # print('|-') # new table row
-
         row_elements = tuple(row.stripped_strings)
 
         # skip incomplete rows

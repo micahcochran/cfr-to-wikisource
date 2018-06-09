@@ -21,7 +21,7 @@ Install all the other requirements for these scripts by doing this:
 
 ## License
 MIT   
-see [LICENSE]
+see [LICENSE](LICENSE)
 
 
 
@@ -85,12 +85,12 @@ styles that it supports. Wikitext examples are in the source.
 
 **Wikitext**
 ```MediaWiki
-{| class="wikitable" style="valign:top;"
-! &nbsp;&nbsp;Proc.&nbsp;No.
-! align="center" | &nbsp;
-! Subject
-! align="center" | Signature Date
-! align="right" |<small>81 FR Page</small>
+{| style="valign:top;"
+! Proc.&nbsp;No.
+! &nbsp;
+! align="left" | Subject
+! <small>Signature Date</small>
+! align="right" |&nbsp;&nbsp;<small>81 FR Page</small>
 |-
 | •&nbsp;[[Proclamation&nbsp;9388]]
 | align="center" | −
