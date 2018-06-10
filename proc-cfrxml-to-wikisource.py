@@ -79,8 +79,7 @@ def print_as_wiki_hybrid_table(rows, table_header):
 
     print(header.format(h_fedreg_page=h_fedreg_page))
     for row in rows:
-        row_elements = tuple(row.stripped_strings)
-
+        row_elements = [r.text.strip() for r in row.find_all('ENT')]
         # skip incomplete rows
         if len(row_elements) < 4:
             continue
@@ -195,20 +194,21 @@ Usage:
     soup = BeautifulSoup(r.content, 'xml')
     tables = soup.find_all('FAIDTABL')
 
-    # find the table for PROCLAMATIONS
+    # find the table(s) for PROCLAMATIONS
     for table in tables:
         if 'PROCLAMATIONS' in table.TABLHED.string:
-            proc_table = table
+            proc_tables = table.find_all('GPOTABLE')
             break
 
-    if not proc_table:
+    if not proc_tables:
         raise IOError("Could not find PROCLAMATIONS in file")
 
-    table_header = [s for s in proc_table.BOXHD.stripped_strings]
+    for proc_table in proc_tables:
+        table_header = [s for s in proc_table.BOXHD.stripped_strings]
 
-    rows = proc_table.find_all('ROW')
+        rows = proc_table.find_all('ROW')
 
-    # === CHOOSE ONE of the below style on how to print the output =========
-    # print_as_wiki_table(rows, table_header)
-    # print_as_single_line(rows)
-    print_as_wiki_hybrid_table(rows, table_header)
+        # === CHOOSE ONE of the below style on how to print the output =========
+        # print_as_wiki_table(rows, table_header)
+        # print_as_single_line(rows)
+        print_as_wiki_hybrid_table(rows, table_header)
