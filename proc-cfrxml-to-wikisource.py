@@ -4,6 +4,7 @@
 #
 # Name: proc-cfrxml-to-wikisource.py
 # License: MIT
+# Copyright (c) Micah Cochran 2018 
 #
 # Purpose:  This script scrapes XML from the U.S. Code of Federal Regulations,
 # Title 3: President Documents and reformats it into wikitext for Wikisource's

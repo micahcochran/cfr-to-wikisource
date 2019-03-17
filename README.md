@@ -1,9 +1,10 @@
 # cfr-to-wikisource
 
 ## Description
-Script that scrape the XML of the U.S. Code of Federal Regulations (CFR) Title 3:
-President Documents (Title 3).  This is a summary of presidential actions that happend in
-the prior year, so the 2007 edition has documents from 2006.
+This script downloads and scrapes the XML of the U.S. Code of Federal
+Regulations (CFR) Title 3: President Documents (Title 3).  This is a summary
+of presidential actions that happend in the prior year, so the 2007 edition
+has documents from 2006.
 
 The XML for the Code of Federal Regulation goes back to 1996, but Title
 3 only starts in 2001.
@@ -16,12 +17,11 @@ Python 3.x  (likely 3.4+)
 Install all the other requirements for these scripts by doing this:
 
 ```
- $ pip install -r requirements
+ $ pip install -r requirements.txt
 ```
 
 ## License
-MIT   
-see [LICENSE](LICENSE)
+MIT  (see [LICENSE](LICENSE))
 
 
 
@@ -33,10 +33,10 @@ styles that it supports. Wikitext examples are in the source.
 
 #### Example output for print_as_single_line()
 
-*[Proclamation 9388](https://en.wikisource.org/wiki/Proclamation_9388) − To Take Certain Actions Under the African Growth and Opportunity Act (Jan. 11)
-*[Proclamation 9389](https://en.wikisource.org/wiki/Proclamation_9389) − Religious Freedom Day, 2016 (Jan. 15)
-*[Proclamation 9390](https://en.wikisource.org/wiki/Proclamation_9390) − Martin Luther King, Jr., Federal Holiday, 2016 (Jan. 15)
-*[Proclamation 9391](https://en.wikisource.org/wiki/Proclamation_9391) − American Heart Month, 2016 (Jan. 29)
+* [Proclamation 9388](https://en.wikisource.org/wiki/Proclamation_9388) − To Take Certain Actions Under the African Growth and Opportunity Act (Jan. 11)
+* [Proclamation 9389](https://en.wikisource.org/wiki/Proclamation_9389) − Religious Freedom Day, 2016 (Jan. 15)
+* [Proclamation 9390](https://en.wikisource.org/wiki/Proclamation_9390) − Martin Luther King, Jr., Federal Holiday, 2016 (Jan. 15)
+* [Proclamation 9391](https://en.wikisource.org/wiki/Proclamation_9391) − American Heart Month, 2016 (Jan. 29)
 
 **Wikitext**
 ```MediaWiki
